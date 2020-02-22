@@ -1,4 +1,5 @@
 env
+.vscode
 __pycache__
 verbs/migrations
 mysite/verbs/migrations
