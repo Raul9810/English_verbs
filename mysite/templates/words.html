@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+<div class="row">
+    <table class="col-12 table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Word</th>
+                <th scope="col">Meaning</th>
+                <th scope="col">Pronuntiation</th>
+                <th scope="col">Attempts</th>
+                <th scope="col">Pactice</th>
+            </tr>
+        </thead>
+        {% for i in context %}
+        <tr>
+            <td scope="row">{{ i.word }}</td>
+            <td>{{ i.meaning }}</td>
+            <td>{{ i.pronunciation }}</td>
+            <td>{{ i.attempts }}/20</td>
+            <td><input type="text"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</div>
+
+{% endblock %}

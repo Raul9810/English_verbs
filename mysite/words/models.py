@@ -4,6 +4,8 @@ class Word(models.Model):
     word = models.CharField(max_length=25)
     meaning = models.CharField(max_length=50)
     pronunciation = models.CharField(max_length=50)
+    attempts = models.IntegerField()
+    practice = models.IntegerField(null=True)
 
 class Verb(models.Model):
     verb = models.ForeignKey(Word, on_delete = models.CASCADE)
